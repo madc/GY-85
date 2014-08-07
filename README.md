@@ -2,6 +2,10 @@
 
 Arduino implementation for GY-85 (ADXL345 accelerometer, ITG3200 gyroscope and HMC5883L magnetometer)
 
+## Theory
+
+(tba.)
+
 ## Wiring
 
 - **[GY-85]** -> **[Arduino]**
@@ -18,4 +22,4 @@ Arduino implementation for GY-85 (ADXL345 accelerometer, ITG3200 gyroscope and H
 
 ## Links
 
-- *tba.*
+- **[A Guide To using IMU (Accelerometer and Gyroscope Devices) in Embedded Applications.](http://www.starlino.com/imu_guide.html)**
