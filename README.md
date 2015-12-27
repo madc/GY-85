@@ -171,3 +171,4 @@ The following list contains articles and other resources, that help to understan
 - [Arduino: simple compass with HMC5883L + Library](http://bluelemonlabs.blogspot.co.at/2013/08/arduino-simple-compass-with-hmc5883l.html)
 - [HMC5883L Three-Axis Compass Magneticfield Module](http://www.electrodragon.com/w/index.php?title=HMC5883L_Three-Axis_Compass_Magneticfield_Module)
 - [Arduino and HMC5883L (With Auto Calibration)](http://hobbylogs.me.pn/?p=17)
+- [A practical approach to Kalman filter and how to implement it](http://blog.tkjelectronics.dk/2012/09/a-practical-approach-to-kalman-filter-and-how-to-implement-it/)
