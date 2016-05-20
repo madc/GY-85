@@ -1,3 +1,5 @@
+[![Project Status: WIP - Initial development is in progress.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
+
 # GY-85
 
 Arduino implementation for GY-85 (ADXL345 accelerometer, ITG3200 gyroscope and HMC5883L magnetometer)
