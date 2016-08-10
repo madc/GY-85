@@ -38,7 +38,7 @@ The chip usually returns digitalized sensor values with a resolution of 10 bit. 
 The G-range and Resolution used in this formula depends of the configuration of the chip. The ADXL345 supports the ranges ±2g/±4g/±8g/±16g. As Resolution, 10 or 13 bit can be set. Measurement Value is simple the raw value, read from the chip for one axis.
 If the ADXL345 is used with the default settings, a resolution of 10 bit and a range of ±2g(=a range of 4g), the following formula can be used:
 
-    Value in G = Measurement Value * (8/(2^10)) = Measurement Value * (8/1024) = Measurement Value * 0.0039
+    Value in G = Measurement Value * (4/(2^10)) = Measurement Value * (4/1024) = Measurement Value * (1/256) = Measurement Value * 0.0039
 
 This calculation must be done for each axis separately. The resulting values are expected to be within ±1g.
 
