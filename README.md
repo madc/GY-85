@@ -2,7 +2,8 @@
 
 # GY-85
 
-Arduino implementation for GY-85 (ADXL345 accelerometer, ITG3200 gyroscope and HMC5883L magnetometer)
+Technical documentation for GY-85 (ADXL345 accelerometer, ITG3200 gyroscope and HMC5883L magnetometer).
+The code shown below can be seen as [pseudocode](https://en.wikipedia.org/wiki/Pseudocode), implementations for Arduino and Processing are in the making at the moment.
 
 ## Theory
 
@@ -52,7 +53,7 @@ These measurements are a bit jumpy and can further be improved by filtering them
     fYg = yg * alpha + fYg * (1.0 - alpha);
     fZg = zg * alpha + fZg * (1.0 - alpha);
 
-Having calculated the x, y and z values in g, these can be used to further calculate the angles. Based on the aircraft principal axes, the rotation about the X-axis is called roll, the rotation about the Y-axis is called pitch. Additional the rotation about the Z-axis would be called yaw, but an 3-axis accelerometer is not able to measure it, as the force vector of gravity does not change during the movement.
+Having calculated the x, y and z values in g, these can be used to further calculate the angles. Based on the [aircraft principal axes](https://en.wikipedia.org/wiki/Aircraft_principal_axes), the rotation about the X-axis is called roll, the rotation about the Y-axis is called pitch. Additional the rotation about the Z-axis would be called yaw, but an 3-axis accelerometer is not able to measure it, as the force vector of gravity does not change during the movement.
 
 	Roll = atan2(yg, zg) * 180/PI;
 	Pitch = atan2(-xg, sqrt(yg*yg + zg*zg)) * 180/PI;
