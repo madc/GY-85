@@ -114,29 +114,35 @@ Honeywell's HMC5883L is a 3-axis digital magnetometer. The chip is most commonly
 
 // multiplicator = Gain, Digital Resolution (mG/LSb) for ± 1.3 Ga (see datasheet p. 13)
 
-	data[0] *= 0.92;
-	data[1] *= 0.92;
-	data[2] *= 0.92;
+	mx = valX * 0.92;
+	my = valY * 0.92;
+	mz = valZ * 0.92;
 
-// Convert to rad
+To now get the heading, arctangent is used.
 
-    Yaw = atan2(Y, X);
+    Heading = atan2(my, mx);
 
-// Declination!?
+Magnetic declination is the deviation between the measured magnetic north and the true north. Depending on the position on the planet, magnetic declination differs. Luckily, there are [websites](http://www.magnetic-declination.com), that help to determine this value.
 
-// Correct for when signs are reversed.
+Taken for my current position, [Graz/Austria](http://www.magnetic-declination.com/Austria/Graz/102700.html), the magnetic declination angle is +3.87°. Once knowing this value the rest is easy, we convert this value in rad and add it to our heading.
 
-    if(Yaw < 0)
-        Yaw += 2*PI;
+    Declination = +3.87 * PI/180 = 0.067544242052;
+    Heading += Declination;
 
-// Check for wrap due to addition of declination.
 
-    if(Yaw > 2*PI)
-        Yaw -= 2*PI;
+Now we correct for when signs are reversed..
 
-// Convert to degrees
+    if (Heading < 0)
+        Heading += 2*PI;
 
-    Yaw in ° = Yaw * 180/PI;
+..and due to the addition of the declination.
+
+    if (Heading > 2*PI)
+        Heading -= 2*PI;
+
+Finally we convert our value to °.
+
+    Heading in ° = Heading * 180/PI;
 
 #### Links
 
