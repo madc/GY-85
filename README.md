@@ -5,6 +5,17 @@
 Technical documentation for GY-85 (ADXL345 accelerometer, ITG3200 gyroscope and HMC5883L magnetometer).
 The code shown below can be seen as [pseudocode](https://en.wikipedia.org/wiki/Pseudocode), implementations for Arduino and Processing are in the making at the moment.
 
+- [Theory](#theory)
+  - [Accelerometer (ADXL345)](#accelerometer-adxl345)
+    - [Links](#links)
+  - [Gyroscope (ITG3200)](#gyroscope-itg3200)
+    - [Links](#links-1)
+  - [Magnetometer (HMC5883L)](#magnetometer-hmc5883l)
+    - [Links](#links-2)
+- [Hardware](#hardware)
+  - [Wiring](#wiring)
+- [Guides and further reading](#guides-and-further-reading)
+
 ## Theory
 
 > An inertial measurement unit (IMU) is an electronic device that measures and reports a craft's velocity, orientation, and gravitational forces, using a combination of accelerometers and gyroscopes, sometimes also magnetometers.
